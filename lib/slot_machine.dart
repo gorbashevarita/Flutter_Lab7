@@ -33,10 +33,10 @@ class _SlotMachineState
     for (int i = 0; i < totalTicks; i++) {
       final progress = i / totalTicks;
       final delay = progress < 0.5
-          ? 40
+          ? 20
           : progress < 0.8
-          ? 100
-          : 200;
+          ? 60
+          : 300;
       await Future.delayed(
         Duration(milliseconds: delay),
       );
